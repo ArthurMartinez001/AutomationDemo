@@ -2,8 +2,8 @@ package QuitBrowser;
 
 public class QuitChrome 
 {
-	//ChromeConnector connection = new ChromeConnector();
 
+		// this method closes a browser page
 	public void closePage() throws InterruptedException
 	{
 		try
@@ -16,18 +16,19 @@ public class QuitChrome
 		}
 	}// end closePage method
 	
-		public void quitChrome() throws InterruptedException
+	//this method quits the driver closing everything out.
+	public void quitChrome() throws InterruptedException
+	{
+		try
 		{
-			try
-			{
-				ChromeConnection.ChromeConnector.driver.quit();
-				
-			}
-			catch(Exception e)
-			{
-				System.out.print(e + " quitChrome method ");
-			}
+			ChromeConnection.ChromeConnector.driver.quit();
 			
-		}//end quitChrome method
+		}
+		catch(Exception e)
+		{
+			System.out.print(e + " quitChrome method ");
+		}
+		
+	}//end quitChrome method
 
 } //end quitChrome method

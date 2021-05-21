@@ -5,12 +5,11 @@ import org.openqa.selenium.WebElement;
 
 public class AutoComplete 
 {
+	//this method finds the hyperlinnk and clicks on it
 	  public void autoCompletePage() //throws InterruptedException
 	 	{
 	 		try
 	 		{
-	 			//WebElement auto1 = ChromeConnection.ChromeConnector.driver.findElement(By.linkText("Autocomplete"));
-	 			//auto1.click();
 	 			
 	 			ChromeConnection.ChromeConnector.driver.findElement(By.linkText("Autocomplete")).click();
 	 		} // end try
@@ -22,12 +21,13 @@ public class AutoComplete
 	 	}// end autoCompletePage method
 
 	
+	  
+	  //this method fills out the info. 
 	 public void input1() //throws InterruptedException
 	    {
 
 	        try {
 
-	            //Thread.sleep(2000);
 
 	            WebElement autocompleted = ChromeConnection.ChromeConnector.driver.findElement(By.id("autocomplete"));
 	            autocompleted.click();
@@ -38,11 +38,11 @@ public class AutoComplete
 	            WebElement autocompleteR = ChromeConnection.ChromeConnector.driver.findElement(By.className("pac-item"));
 	            autocompleteR.click();
 
-	        } //end try
+	        	} //end try
 	        catch (Exception e)
-	        {
-	            System.out.print(e + ", Location: input1. ");
-	        } //end catch
+		        {
+		            System.out.print(e + ", Location: input1. ");
+		        } //end catch
 
 	    }// end input1 method
 
