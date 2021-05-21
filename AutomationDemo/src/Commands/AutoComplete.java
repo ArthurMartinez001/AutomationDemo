@@ -9,8 +9,10 @@ public class AutoComplete
 	 	{
 	 		try
 	 		{
-	 			WebElement auto1 = ChromeConnection.ChromeConnector.driver.findElement(By.linkText("Autocomplete"));
-	 			auto1.click();
+	 			//WebElement auto1 = ChromeConnection.ChromeConnector.driver.findElement(By.linkText("Autocomplete"));
+	 			//auto1.click();
+	 			
+	 			ChromeConnection.ChromeConnector.driver.findElement(By.linkText("Autocomplete")).click();
 	 		} // end try
 	 		catch(Exception e)
 	 		{
@@ -29,8 +31,9 @@ public class AutoComplete
 
 	            WebElement autocompleted = ChromeConnection.ChromeConnector.driver.findElement(By.id("autocomplete"));
 	            autocompleted.click();
+	            ChromeConnection.ChromeConnector.driver.findElement(By.id("autocomplete")).click();
 	            autocompleted.sendKeys("North Orange Grove Avenue, Pomona, CA 91768");
-
+	            
 	            Thread.sleep(1000);
 	            WebElement autocompleteR = ChromeConnection.ChromeConnector.driver.findElement(By.className("pac-item"));
 	            autocompleteR.click();
