@@ -8,7 +8,8 @@ public class ChromeBrowserTest
 	{
 		try
 		{	
-			ChromeConnection.ChromeConnector.driver.get("https://formy-project.herokuapp.com");
+			// goes directly to webpage
+			ChromeConnection.ChromeConnector.driver.navigate().to("https://formy-project.herokuapp.com");
 			
 		}//end try
 		catch(Exception e)

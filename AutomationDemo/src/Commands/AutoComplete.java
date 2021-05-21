@@ -1,16 +1,16 @@
 package Commands;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.By.ByLinkText;
 import org.openqa.selenium.WebElement;
 
 public class AutoComplete 
 {
-	  public void autoCompletePage() throws InterruptedException
+	  public void autoCompletePage() //throws InterruptedException
 	 	{
 	 		try
 	 		{
-	 			ChromeConnection.ChromeConnector.driver.findElements(ByLinkText.linkText("Autocomplete"));
+	 			WebElement auto1 = ChromeConnection.ChromeConnector.driver.findElement(By.linkText("Autocomplete"));
+	 			auto1.click();
 	 		} // end try
 	 		catch(Exception e)
 	 		{
@@ -20,7 +20,7 @@ public class AutoComplete
 	 	}// end autoCompletePage method
 
 	
-	 public void input1() throws InterruptedException
+	 public void input1() //throws InterruptedException
 	    {
 
 	        try {
