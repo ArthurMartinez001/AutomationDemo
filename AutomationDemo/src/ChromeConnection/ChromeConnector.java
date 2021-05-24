@@ -4,7 +4,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class ChromeConnector 
 
-{
+{	//Webdriver location
 	public static WebDriver driver = new ChromeDriver();
 	
 	public void ChromeStarter()

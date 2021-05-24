@@ -18,10 +18,11 @@ public class AutoMain {
 		
 		web.webPage();
 		Thread.sleep(2000);
-		filler.autoCompletePage();
+		web.autoCompletePage();
 		Thread.sleep(1000);
 		filler.input1();
 		Thread.sleep(1000);
+		//tear down
 		quitter.quitChrome();
 		System.out.print("Execution Complete");
 
