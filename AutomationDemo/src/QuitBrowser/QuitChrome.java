@@ -8,7 +8,7 @@ public class QuitChrome
 	{
 		try
 		{
-			ChromeConnection.ChromeConnector.driver.close();
+			BrowserConnection.ChromeConnector.driver.close();
 		}
 		catch(Exception e)
 		{
@@ -21,7 +21,7 @@ public class QuitChrome
 	{
 		try
 		{
-			ChromeConnection.ChromeConnector.driver.quit();
+			BrowserConnection.ChromeConnector.driver.quit();
 			
 		}
 		catch(Exception e)

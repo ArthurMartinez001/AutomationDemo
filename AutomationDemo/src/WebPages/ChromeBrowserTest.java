@@ -11,7 +11,7 @@ public class ChromeBrowserTest
 		try
 		{	
 			// goes directly to webpage
-			ChromeConnection.ChromeConnector.driver.navigate().to("https://formy-project.herokuapp.com");
+			BrowserConnection.ChromeConnector.driver.navigate().to("https://formy-project.herokuapp.com");
 			
 		}//end try
 		catch(Exception e)
@@ -21,13 +21,13 @@ public class ChromeBrowserTest
 		
 	} //end webpage method
 	
-	//this method finds the hyperlinnk and clicks on it
+	//this method finds the hyperlinnk AutoComplete and clicks on it
 	  public void autoCompletePage() //throws InterruptedException
 	 	{
 	 		try
 	 		{
 	 			
-	 			ChromeConnection.ChromeConnector.driver.findElement(By.linkText("Autocomplete")).click();
+	 			BrowserConnection.ChromeConnector.driver.findElement(By.linkText("Autocomplete")).click();
 	 		} // end try
 	 		catch(Exception e)
 	 		{
@@ -36,6 +36,17 @@ public class ChromeBrowserTest
 	 		
 	 	}// end autoCompletePage method
 	  
-	  
+	  //this method finds the hyperlink Switch Window and clicks on it. 
+	  public void switchWindow()
+	  {
+		  try 
+		  {
+			  BrowserConnection.ChromeConnector.driver.findElement(By.linkText("Switch Window")).click();
+		  }
+		  catch(Exception e)
+		  {
+			  System.out.print("Switch Window" + e);
+		  }
+	  }// end of switchWindow method
 	
 }// end ChromeBrowserTest class

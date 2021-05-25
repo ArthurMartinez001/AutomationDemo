@@ -1,30 +1,19 @@
 package AutomationDemoFramework;
 
-import Commands.AutoComplete;
 import QuitBrowser.QuitChrome;
-import WebPages.ChromeBrowserTest;
 
 public class AutoMain {
 
 	
 	public static void main(String[] args) throws InterruptedException
 	{
-		
-		
-		ChromeBrowserTest web = new ChromeBrowserTest();
-		AutoComplete filler = new AutoComplete();
+		TestRun runner = new TestRun();
 		QuitChrome quitter = new QuitChrome();
 		
-		
-		web.webPage();
-		Thread.sleep(2000);
-		web.autoCompletePage();
-		Thread.sleep(1000);
-		filler.input1();
-		Thread.sleep(1000);
-		//tear down
+		runner.chromeAutoComplete();
+		Thread.sleep(500);
 		quitter.quitChrome();
-		System.out.print("Execution Complete");
+		
 
 	}
 

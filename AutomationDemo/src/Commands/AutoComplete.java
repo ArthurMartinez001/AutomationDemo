@@ -12,12 +12,12 @@ public class AutoComplete
 	        try {
 
 
-	            WebElement autocompleted = ChromeConnection.ChromeConnector.driver.findElement(By.id("autocomplete"));
+	            WebElement autocompleted = BrowserConnection.ChromeConnector.driver.findElement(By.id("autocomplete"));
 	            autocompleted.click();
 	            autocompleted.sendKeys("North Orange Grove Avenue, Pomona, CA 91768");
 	            //select the pac item found that matches the address, then click it.
 	            Thread.sleep(1000);
-	            WebElement autocompleteR = ChromeConnection.ChromeConnector.driver.findElement(By.className("pac-item"));
+	            WebElement autocompleteR = BrowserConnection.ChromeConnector.driver.findElement(By.className("pac-item"));
 	            autocompleteR.click();
 
 	        	} //end try
