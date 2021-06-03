@@ -1,5 +1,9 @@
 package AutomationDemoFramework;
 
+import org.junit.Before;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
 import Commands.AutoComplete;
 import QuitBrowser.QuitChrome;
 import WebPages.ChromeBrowserTest;
@@ -17,6 +21,9 @@ public class TestRun
 	 * 4. User selects a choice. 
 	 * 5. Page should fill in address. 
 	 * */
+	
+	@Before
+	
 	public void chromeAutoComplete() throws InterruptedException
 	{
 		try
@@ -27,10 +34,8 @@ public class TestRun
 			web.autoCompletePage();
 			Thread.sleep(1000);
 			filler.input1();
-			Thread.sleep(1000);
-			//tear down
-			quitter.closePage();
-			System.out.print("Auto Complete test complete");
+			
+			
 		}
 		catch(Exception e)
 		{
@@ -53,6 +58,17 @@ public class TestRun
 		{
 			System.out.print("switchToActiveWindow: " + e);
 		}
+	}
+	
+	public void quickTest() throws InterruptedException
+	{
+		web.webPage();
+		Thread.sleep(2000);
+		web.autoCompletePage();
+		Thread.sleep(1000);
+		WebElement autocompleted = BrowserConnection.ChromeConnector.driver.findElement(By.id("route"));
+        autocompleted.click();
+        autocompleted.sendKeys("North Orange Grove Avenue");
 	}
 
 }// end class TestRun

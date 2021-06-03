@@ -12,7 +12,7 @@ public class AutoMain {
 		
 		runner.chromeAutoComplete();
 		Thread.sleep(500);
-		quitter.quitChrome();
+		//quitter.quitChrome();
 		
 
 	}
