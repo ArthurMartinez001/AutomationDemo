@@ -20,6 +20,7 @@ public class TestRun
 	 * 3. Autocomplete displays address. 
 	 * 4. User selects a choice. 
 	 * 5. Page should fill in address. 
+	 * 
 	 * */
 	
 	@Before
