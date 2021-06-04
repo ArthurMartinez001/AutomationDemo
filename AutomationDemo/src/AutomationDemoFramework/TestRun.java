@@ -33,8 +33,7 @@ public class TestRun
 			Thread.sleep(2000);
 			web.autoCompletePage();
 			Thread.sleep(1000);
-			filler.input1();
-			
+			filler.input1();		
 			
 		}
 		catch(Exception e)
@@ -44,14 +43,13 @@ public class TestRun
 	} //chromeAutoComplete method.
 	
 	public void switchToActiveWindow()
-	{
+	{ //This method will click on hyperlink Switch Window and launch the page
 		try 
 		{
 			web.webPage();
 			Thread.sleep(1000);
 			web.switchWindow();
 			Thread.sleep(1000);
-			quitter.closePage();
 			System.out.print("Active Window test complete");
 		}
 		catch (Exception e)

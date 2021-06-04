@@ -10,9 +10,7 @@ public class AutoMain {
 		TestRun runner = new TestRun();
 		QuitChrome quitter = new QuitChrome();
 		
-		runner.chromeAutoComplete();
-		Thread.sleep(500);
-		//quitter.quitChrome();
+		
 		
 
 	}
