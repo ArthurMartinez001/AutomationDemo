@@ -21,7 +21,14 @@ public class TestRunJUnitTests
 	QuitChrome quitter = new QuitChrome();
 	TestRun runTest = new TestRun();
 	
-	
+	/* Test Case: Input Address search, select on result.
+	 * 1. User clicks on main page hyperlink AutoComplete
+	 * 2. Page opens, user adds input in the search.
+	 * 3. Autocomplete displays address. 
+	 * 4. User selects a choice. 
+	 * 5. Page should fill in address. 
+	 * 6. Verify all address text is filled correctly.
+	 * */
 	
 	@Before
 	public void setUp() throws InterruptedException
