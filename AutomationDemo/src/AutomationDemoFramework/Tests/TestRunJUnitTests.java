@@ -1,4 +1,4 @@
-package AutomationDemoFramework;
+package AutomationDemoFramework.Tests;
 
 import static org.junit.Assert.*;
 
@@ -8,6 +8,7 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+import AutomationDemoFramework.TestRun;
 import BrowserConnection.ChromeConnector;
 import Commands.AutoComplete;
 import QuitBrowser.QuitChrome;
