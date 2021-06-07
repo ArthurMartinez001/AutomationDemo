@@ -1,5 +1,7 @@
 package AutomationDemoFramework;
 
+import java.util.concurrent.TimeUnit;
+
 import org.junit.Before;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -23,7 +25,7 @@ public class TestRun
 	 * 6. Verify all address text is filled correctly.
 	 * */
 	
-	@Before
+
 	
 	public void chromeAutoComplete() throws InterruptedException
 	{
@@ -31,7 +33,7 @@ public class TestRun
 		{
 			
 			web.webPage();
-			Thread.sleep(2000);
+			Thread.sleep(1000);
 			web.autoCompletePage();
 			Thread.sleep(1000);
 			filler.input1();		

@@ -40,7 +40,7 @@ public class TestRunJUnitTests
 	@Test
 	public void test() throws InterruptedException 
 	{	
-		System.out.print("Start address test.\n");
+		System.out.print("Start: address test.\n");
 		WebElement streetNo = BrowserConnection.ChromeConnector.driver.findElement(By.id("route"));
 		WebElement streetName = BrowserConnection.ChromeConnector.driver.findElement(By.id("street_number"));
 		WebElement city = BrowserConnection.ChromeConnector.driver.findElement(By.id("locality"));
@@ -73,6 +73,8 @@ public class TestRunJUnitTests
 		System.out.print("\n**** Text Tests Passed ****\n\n");
 			
 	} //end Test
+	
+
 	
 	@After
 	public void breakDown() throws InterruptedException
