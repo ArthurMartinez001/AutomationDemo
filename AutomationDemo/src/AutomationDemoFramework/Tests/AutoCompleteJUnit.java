@@ -14,7 +14,7 @@ import Commands.AutoComplete;
 import QuitBrowser.QuitChrome;
 import WebPages.ChromeBrowserTest;
 
-public class TestRunJUnitTests 
+public class AutoCompleteJUnit 
 {
 	ChromeConnector connectMe = new ChromeConnector();
 	ChromeBrowserTest web = new ChromeBrowserTest();
