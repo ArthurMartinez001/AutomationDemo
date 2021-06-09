@@ -2,13 +2,11 @@ package AutomationDemoFramework.Tests;
 
 import static org.junit.Assert.*;
 
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-import AutomationDemoFramework.TestRun;
+import AutomationDemoFramework.BeforeTestRun;
 import BrowserConnection.ChromeConnector;
 import Commands.AutoComplete;
 import QuitBrowser.QuitChrome;
@@ -20,7 +18,8 @@ public class AutoCompleteJUnit
 	ChromeBrowserTest web = new ChromeBrowserTest();
 	AutoComplete filler = new AutoComplete();
 	QuitChrome quitter = new QuitChrome();
-	TestRun runTest = new TestRun();
+	BeforeTestRun runTest = new BeforeTestRun();
+
 	
 	/* Test Case: Input Address search, select on result.
 	 * 1. User clicks on main page hyperlink AutoComplete
@@ -31,17 +30,13 @@ public class AutoCompleteJUnit
 	 * 6. Verify all address text is filled correctly.
 	 * */
 	
-	@Before
-	public void setUp() throws InterruptedException
-	{  //set up 
-		runTest.chromeAutoComplete();
-		Thread.sleep(1000);	
-	} //end set up  
 	
 	@Test
 	public void test() throws InterruptedException 
 	{	
 		System.out.print("Start: address test.\n");
+		runTest.chromeAutoComplete();
+		Thread.sleep(1000);	
 		WebElement streetNo = BrowserConnection.ChromeConnector.driver.findElement(By.id("route"));
 		WebElement streetName = BrowserConnection.ChromeConnector.driver.findElement(By.id("street_number"));
 		WebElement city = BrowserConnection.ChromeConnector.driver.findElement(By.id("locality"));
@@ -71,20 +66,9 @@ public class AutoCompleteJUnit
 		assertEquals(countryText, countryInfo);
 		
 		
-		System.out.print("\n**** Text Tests Passed ****\n\n");
+		System.out.print("\n**** AutoFill Tests Passed ****\n\n");
 			
 	} //end Test
-	
-
-	
-	@After
-	public void breakDown() throws InterruptedException
-	{
-		//complete breakdown or teardown
-		quitter.closePage();
-		System.out.print("Test complete.");
-	}// end breakDown Method
-	
 
 
 } //end TestRunJUnitTests class

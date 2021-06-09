@@ -1,8 +1,5 @@
 package AutomationDemoFramework;
 
-import java.util.concurrent.TimeUnit;
-
-import org.junit.Before;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -10,20 +7,18 @@ import Commands.AutoComplete;
 import QuitBrowser.QuitChrome;
 import WebPages.ChromeBrowserTest;
 
-public class TestRun 
+public class BeforeTestRun 
 {
 	ChromeBrowserTest web = new ChromeBrowserTest();
 	AutoComplete filler = new AutoComplete();
 	QuitChrome quitter = new QuitChrome();
 	
-	/* Test Case: Input Address search, select on result.
-	 * 1. User clicks on main page hyperlink AutoComplete
-	 * 2. Page opens, user adds input in the search.
-	 * 3. Autocomplete displays address. 
-	 * 4. User selects a choice. 
-	 * 5. Page should fill in address. 
-	 * 6. Verify all address text is filled correctly.
-	 * */
+	/***
+	 * SetUp
+	 * Open main webpage
+	 * find hyperlink "AutoComplete"
+	 * click on it
+	 */
 	
 
 	
@@ -45,6 +40,15 @@ public class TestRun
 		}
 	} //chromeAutoComplete method.
 	
+	
+	
+	/***
+	 * SetUp
+	 * Open main webpage
+	 * find hyperlink "Switch Window"
+	 * click on it
+	 */
+	
 	public void switchToActiveWindow()
 	{ //This method will click on hyperlink Switch Window and launch the page
 		try 
@@ -53,7 +57,7 @@ public class TestRun
 			Thread.sleep(1000);
 			web.switchWindow();
 			Thread.sleep(1000);
-			System.out.print("Active Window test complete");
+			
 		}
 		catch (Exception e)
 		{
@@ -61,6 +65,12 @@ public class TestRun
 		}
 	}
 	
+	
+	/***
+	 * This function is for
+	 * quick test, verify it is working
+	 * 
+	 */
 	public void quickTest() throws InterruptedException
 	{
 		web.webPage();
